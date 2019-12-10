@@ -1,0 +1,27 @@
+@import 'https://fonts.googleapis.com/css?family=Ubuntu:400,500&subset=latin,cyrillic';
+
+html, body {
+  width: 95%; 
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Ubuntu', serif; 
+  font-size: 36px;
+  color: #000;
+}
+
+.textarea {
+    
+}
+
+.translate {
+  display: flex; 
+  width: 100%; 
+  height: 100%;
+  border: 2px solid #000;
+  justify-content: center; 
+  align-items: center;
+}

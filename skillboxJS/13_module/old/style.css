@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+}
+
+.main {
+    text-align: center;
+}
+
+.h2 {
+    
+}
+
+.text {
+    
+}
+
+.block {
+    margin-top: 20px;
+}
+
+.btn-1,
+.btn-2,
+.btn-3 {
+    cursor: pointer;
+}
+
+.btn-1 {
+    
+}
+
+.btn-2 {
+    margin-right: 15px;
+    background-color: green;
+    border: none;
+}
+
+.btn-3 {
+    margin-right: 15px;
+    background-color: red;
+    border: none;
+}

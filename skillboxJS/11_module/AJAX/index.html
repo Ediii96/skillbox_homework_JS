@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Клиент и сервер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>"Клиент и сервер"</h1>
+    <div class="main"> 
+        <h2>Переводчик</h2> 
+        <form name="form">      
+            <select name="language" id="language" multiple>
+                <option value="ru-en" selected>С русского на английский</option>
+                <option value="en-ru" >С английского на русский</option>
+                <option value="uk-ru" >С украиского на русский</option>
+                <option value="ru-uk" >С русского на украиский</option>
+            </select>
+        </form><br>
+        <textarea id="textarea" class="textarea" type="text" rows="10" cols="100"></textarea>
+        <input class="button" type="submit" value="Перевети">
+        <div class="translate">
+
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
