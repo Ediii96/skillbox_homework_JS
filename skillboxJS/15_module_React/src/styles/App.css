@@ -1,0 +1,26 @@
+div {
+    text-align: center;
+}
+
+h1 {
+    color: hsl(294, 92%, 25%);
+    text-align: center;
+}
+
+input {
+    margin: 10px;
+}
+
+textarea {
+    margin-left: 10px;
+    width: 40%;
+    height: 150px;
+    resize: none;
+} 
+
+span,
+strong {
+    display: block;
+    padding: 5px;
+    margin-bottom: 5px;
+}
