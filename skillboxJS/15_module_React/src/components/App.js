@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { format } from 'date-fns';
+import AppInput from "./Input.js";
+import AppTextarea from "./Textarea.js";
 import '../styles/App.css';
 
 class App extends Component {
@@ -30,7 +32,7 @@ class App extends Component {
                 comments: [
                 ...this.state.comments,
                 {
-                    id: this.state.comments.length ? this.state.comments.reduce((p, c) => p.id > c.id ? p : c).id + 1 : 1,
+                    id: this.state.comments.length ? this.state.comments.reduce((props, count) => props.id > count.id ? props : count).id + 1 : 1,
                     name: this.state.form.name,
                     comment: this.state.form.comment
                 }
@@ -63,30 +65,37 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-
-            <div style={ {marginBottom: "20px"} }>
-                <label>Имя: <input
-                    type="text"
-                    value={this.state.form.name}
-                    name="name"
-                    onChange={this.handleChange} /></label><br />
-                <label>Коментарий:<br /> 
-                <textarea
-                    name="comment"
-                    value={this.state.form.comment}
-                    onChange={this.handleChange}>
-                </textarea>
-                </label><br />
-                <button className="btn btn-primary btn-lg" onClick={this.addComment}>Добавить комментарий</button>
-            </div>
-                {this.state.comments.map(comment => <div key={comment.id} style={{border: '5px solid #000000'}}>
-                <span style={ {fontStyle: 'italic'}}>Коментарий №{comment.id} Дата: {format(new Date(), 'dd/MM/yyyy')}: </span><br />
-                <span>Автор комментария:  </span>
-                <strong>{comment.name}</strong><br />
-                <span style={{border: '2px solid red', textAlign: 'start', paddingLeft: '30px'}}>{comment.comment}</span>
-                <button onClick={this.removeComment.bind(null, comment.id)} style={{padding: '10px'}}>Удалить</button>
-            </div>)}
-            <br />
+                {this.state.comments.map(comment => <div className="Comment" key={comment.id}>
+                    <span>Комментарий №{comment.id}</span><br />
+                    <span>Дата: {format(new Date(), 'dd/MM/yyyy')} </span><br />
+                    <span>Автор комментария:</span>
+                    <strong className="Comment_author-name">{comment.name}</strong><br />
+                    <span className="Comment_author-comment">{comment.comment}</span><br />
+                    <button className="Comment_author-button" onClick={this.removeComment.bind(null, comment.id)}>Удалить</button>
+                </div>)}
+                <div className="Form">
+                    <label>
+                        Имя:<br /> 
+                        <AppInput 
+                            type="text"
+                            name="name"
+                            className="Form_input"
+                            value={this.state.form.name}
+                            onChange={this.handleChange}
+                        />
+                    </label><br />
+                    <label>
+                        Комментарий:<br /> 
+                        <AppTextarea 
+                            name="comment"
+                            className="Form_textarea"
+                            value={this.state.form.comment}
+                            onChange={this.handleChange}
+                        />
+                    </label><br />
+                    <button className="Form_button" onClick={this.addComment}>Добавить комментарий</button>
+                </div>
+                <br />
             </div>
         )
     }
