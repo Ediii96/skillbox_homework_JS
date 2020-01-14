@@ -1,0 +1,84 @@
+.Comment {
+    margin: 0 auto;
+    width: 30%;
+    margin-bottom: 30px;
+    background-color: #EEE7E7;
+    border-radius: 15px 0px 15px 0px;
+    text-align: center;
+}
+
+.Comment_author-comment {
+    border-top: 1px solid #849DB2;
+    border-bottom: 1px solid #849DB2;
+}
+
+.Comment_author-button {
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #FF0800;
+    border: none; 
+}
+
+.Comment_author-button:focus, 
+.Comment_author-button:hover{
+    outline:0 none !important;
+}
+
+.Comment_author-button:active {
+    background-color: #000
+}
+
+.Comment_author-name,
+.Comment_author-comment {
+    display: block;
+    margin-bottom: 10px; 
+}
+
+span {
+    display: block;
+}
+
+.Form {
+    margin: 0 auto;
+    width: 30%;
+    margin-top: 50px;
+    background-color: #EEE7E7;
+    border: 1px solid #849DB2;
+    border-radius: 0px 15px 0px 15px;
+    text-align: center;
+}
+
+.Form_textarea:focus,
+.Form_input:focus {
+    border-color: none;
+    outline:0 none !important;
+}
+
+.Form_textarea {
+    width: 90%;
+    height: 100px;
+    resize: none;
+} 
+
+.Form_button {
+    padding: 10px;
+    color: #ffffff;
+    background-color: #167AC6;
+    border: none;
+}
+
+.Form_button:focus, 
+.Form_button:hover{
+    outline:0 none !important;
+}
+
+.Form_button:active {
+    background-color: #0A61A3;
+}
+
+.Form_input,
+.Form_textarea,
+.Form_button {
+    margin-bottom: 10px;    
+}
